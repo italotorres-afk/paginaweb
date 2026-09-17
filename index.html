@@ -1,139 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Galería de Motos</title>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            background: #f4f1ea;
-            color: #293241;
+            background: #e8f0f2;
+            color: #243447;
+            margin: 0;
         }
 
         header {
-            background: #293241;
+            background: #0b3954;
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 40px 20px;
         }
 
         header h1 {
             font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        header p {
-            color: #dce3e8;
-        }
-
-        .contenedor {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .subir {
-            background: white;
-            border: 2px dashed #ee6c4d;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .subir h2 {
-            margin-bottom: 12px;
-        }
-
-        .subir p {
-            color: #667;
-            margin-bottom: 20px;
-        }
-
-        input[type="file"] {
-            display: none;
-        }
-
-        .boton-subir {
-            display: inline-block;
-            background: #ee6c4d;
-            color: white;
-            padding: 14px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .boton-subir:hover {
-            background: #d9573a;
         }
 
         .galeria {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            justify-content: center;
             gap: 30px;
+            padding: 50px 20px;
+            flex-wrap: wrap;
         }
 
         .moto {
             background: white;
+            width: 400px;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 15px #00000015;
+            box-shadow: 0 5px 15px #0002;
         }
 
         .moto img {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            display: block;
         }
 
         .contenido {
-            padding: 22px;
+            padding: 25px;
         }
 
         .contenido h2 {
-            color: #293241;
-            margin-bottom: 10px;
+            color: #0b3954;
         }
 
         .contenido p {
-            color: #667;
             line-height: 1.6;
         }
 
-        .vacio {
-            text-align: center;
-            color: #777;
-            padding: 25px;
-            grid-column: 1 / -1;
+        .boton {
+            display: inline-block;
+            background: #f28f3b;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
         }
 
         footer {
-            background: #293241;
+            background: #0b3954;
             color: white;
             text-align: center;
             padding: 25px;
-            margin-top: 50px;
         }
 
         @media (max-width: 700px) {
-            .galeria {
-                grid-template-columns: 1fr;
-            }
-
-            header h1 {
-                font-size: 30px;
+            .moto {
+                width: 100%;
             }
         }
     </style>
@@ -142,101 +85,47 @@
 <body>
 
     <header>
-        <h1>🏍️ Moto Gallery</h1>
-        <p>Tu espacio para mostrar tus motocicletas</p>
+        <h1>🏍️ Galería de Motos</h1>
+        <p>Conoce nuestras motocicletas</p>
     </header>
 
-    <main class="contenedor">
+    <main class="galeria">
 
-        <!-- SUBIR IMÁGENES -->
-        <section class="subir">
+        <article class="moto">
+            <img src="imagenes/moto1.jpg" alt="Moto deportiva">
 
-            <h2>Agrega tus motos</h2>
+            <div class="contenido">
+                <h2>Moto Deportiva</h2>
 
-            <p>
-                Selecciona hasta 2 imágenes desde tu computadora.
-            </p>
+                <p>
+                    Motocicleta potente y moderna,
+                    ideal para los amantes de la velocidad.
+                </p>
 
-            <label for="imagenes" class="boton-subir">
-                📷 Seleccionar imágenes
-            </label>
+                <a href="#" class="boton">Ver detalles</a>
+            </div>
+        </article>
 
-            <input
-                type="file"
-                id="imagenes"
-                accept="image/*"
-                multiple
-            >
+        <article class="moto">
+            <img src="imagenes/moto2.jpg" alt="Moto moderna">
 
-        </section>
+            <div class="contenido">
+                <h2>Moto Moderna</h2>
 
-        <!-- GALERÍA -->
-        <section class="galeria" id="galeria">
+                <p>
+                    Diseño elegante y comodidad
+                    para disfrutar cada viaje.
+                </p>
 
-            <p class="vacio">
-                Todavía no has seleccionado imágenes.
-            </p>
-
-        </section>
+                <a href="#" class="boton">Ver detalles</a>
+            </div>
+        </article>
 
     </main>
 
     <footer>
-        <p>© 2026 Moto Gallery | Galería de motocicletas</p>
+        <p>© 2026 Galería de Motos</p>
     </footer>
-
-    <script>
-
-        const input = document.getElementById("imagenes");
-        const galeria = document.getElementById("galeria");
-
-        input.addEventListener("change", function() {
-
-            const archivos = Array.from(input.files).slice(0, 2);
-
-            galeria.innerHTML = "";
-
-            if (archivos.length === 0) {
-                galeria.innerHTML =
-                    '<p class="vacio">No seleccionaste imágenes.</p>';
-                return;
-            }
-
-            archivos.forEach((archivo, indice) => {
-
-                const lector = new FileReader();
-
-                lector.onload = function(e) {
-
-                    const tarjeta = document.createElement("article");
-                    tarjeta.className = "moto";
-
-                    tarjeta.innerHTML = `
-                        <img src="${e.target.result}"
-                             alt="Motocicleta ${indice + 1}">
-
-                        <div class="contenido">
-                            <h2>Moto ${indice + 1}</h2>
-
-                            <p>
-                                Una motocicleta de mi colección.
-                                Puedes cambiar este texto
-                                por la descripción de tu moto.
-                            </p>
-                        </div>
-                    `;
-
-                    galeria.appendChild(tarjeta);
-
-                };
-
-                lector.readAsDataURL(archivo);
-
-            });
-
-        });
-
-    </script>
 
 </body>
 </html>
