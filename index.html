@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>MotoZone | Galería</title>
+    <title>Galería de Motos</title>
 
     <style>
         * {
@@ -16,99 +15,45 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #eef2f7;
-            color: #172033;
+            background: #e8f0f2;
+            color: #243447;
         }
 
-        /* BARRA DE NAVEGACIÓN */
-        nav {
-            background: #172033;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav h2 {
-            color: #ff9f1c;
-            font-size: 25px;
-        }
-
-        nav a {
+        header {
+            background: #0b3954;
             color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        /* PRESENTACIÓN */
-        .presentacion {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #172033, #354f72);
-            color: white;
+            padding: 40px 20px;
         }
 
-        .presentacion h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
+        header h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
         }
 
-        .presentacion p {
-            color: #dce6f5;
-            font-size: 17px;
+        header p {
+            color: #b9d6e5;
         }
 
-        .linea {
-            width: 70px;
-            height: 4px;
-            background: #ff9f1c;
-            margin: 20px auto;
-            border-radius: 10px;
-        }
-
-        /* CONTENEDOR */
-        .contenedor {
-            max-width: 1100px;
-            margin: auto;
-            padding: 55px 20px;
-        }
-
-        .titulo {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-
-        .titulo h2 {
-            font-size: 30px;
-        }
-
-        .titulo p {
-            margin-top: 10px;
-            color: #65738b;
-        }
-
-        /* TARJETAS */
-        .motos {
+        .galeria {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
         }
 
-        .tarjeta {
+        .moto {
             background: white;
-            border-radius: 18px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(23, 32, 51, 0.12);
-            transition: 0.3s;
+            border: 1px solid #cbdce2;
         }
 
-        .tarjeta:hover {
-            transform: scale(1.03);
-        }
-
-        .tarjeta img {
+        .moto img {
             width: 100%;
-            height: 260px;
+            height: 250px;
             object-fit: cover;
         }
 
@@ -116,70 +61,44 @@
             padding: 25px;
         }
 
-        .etiqueta {
-            color: #ff8c00;
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .contenido h3 {
-            font-size: 25px;
-            margin: 10px 0;
+        .contenido h2 {
+            color: #0b3954;
+            margin-bottom: 12px;
         }
 
         .contenido p {
-            color: #65738b;
-            line-height: 1.7;
+            line-height: 1.6;
+            color: #536b76;
             margin-bottom: 20px;
-        }
-
-        .datos {
-            display: flex;
-            justify-content: space-between;
-            background: #f1f4f8;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 14px;
         }
 
         .boton {
             display: inline-block;
-            background: #ff9f1c;
-            color: #172033;
-            padding: 13px 24px;
-            border-radius: 25px;
+            background: #f28f3b;
+            color: white;
+            padding: 12px 22px;
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            border-radius: 5px;
         }
 
         .boton:hover {
-            background: #172033;
-            color: white;
+            background: #d96f18;
         }
 
-        /* PIE DE PÁGINA */
         footer {
-            background: #172033;
-            color: #cbd5e1;
+            background: #0b3954;
+            color: white;
             text-align: center;
             padding: 25px;
         }
 
-        /* CELULARES */
         @media (max-width: 700px) {
-            .motos {
+            .galeria {
                 grid-template-columns: 1fr;
             }
 
-            .presentacion h1 {
-                font-size: 32px;
-            }
-
-            nav {
-                padding: 20px;
+            header h1 {
+                font-size: 30px;
             }
         }
     </style>
@@ -187,103 +106,61 @@
 
 <body>
 
-    <!-- NAVEGACIÓN -->
-    <nav>
-        <h2> MotoZone</h2>
-        <a href="#motos">Explorar motos</a>
-    </nav>
+    <header>
+        <h1>🏍️ Moto World</h1>
+        <p>Descubre el mundo de las motocicletas</p>
+    </header>
 
-    <!-- PRESENTACIÓN -->
-    <section class="presentacion">
-        <h1>Vive la velocidad</h1>
+    <main class="galeria">
 
-        <div class="linea"></div>
+        <!-- PRIMERA MOTO -->
+        <article class="moto">
 
-        <p>
-            Descubre motocicletas que combinan potencia,
-            diseño y aventura.
-        </p>
-    </section>
+            <img src="imagenes/moto1.jpg"
+                 alt="Primera motocicleta">
 
-    <!-- GALERÍA -->
-    <main class="contenedor" id="motos">
+            <div class="contenido">
+                <h2>Moto Deportiva</h2>
 
-        <div class="titulo">
-            <h2>Nuestras motocicletas</h2>
-            <p>Conoce dos modelos destacados</p>
-        </div>
+                <p>
+                    Una motocicleta de diseño deportivo,
+                    ideal para los amantes de la velocidad
+                    y la aventura.
+                </p>
 
-        <section class="motos">
+                <a href="#" class="boton">
+                    Ver moto
+                </a>
+            </div>
 
-            <!-- MOTO 1 -->
-            <article class="tarjeta">
+        </article>
 
-                <img
-                    src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80"
-                    alt="Motocicleta deportiva">
+        <!-- SEGUNDA MOTO -->
+        <article class="moto">
 
-                <div class="contenido">
+            <img src="imagenes/moto2.jpg"
+                 alt="Segunda motocicleta">
 
-                    <span class="etiqueta">Deportiva</span>
+            <div class="contenido">
+                <h2>Moto Urbana</h2>
 
-                    <h3>Street Racer</h3>
+                <p>
+                    Una motocicleta moderna y elegante,
+                    perfecta para recorrer la ciudad
+                    con comodidad.
+                </p>
 
-                    <p>
-                        Una motocicleta con estilo agresivo,
-                        gran rendimiento y diseño pensado
-                        para los amantes de la adrenalina.
-                    </p>
+                <a href="#" class="boton">
+                    Ver moto
+                </a>
+            </div>
 
-                    <div class="datos">
-                        <span> Potente</span>
-                        <span>Deportiva</span>
-                    </div>
-
-                    <a href="#" class="boton">
-                        Explorar moto
-                    </a>
-
-                </div>
-            </article>
-
-            <!-- MOTO 2 -->
-            <article class="tarjeta">
-
-                <img
-                    src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=900&q=80"
-                    alt="Motocicleta moderna">
-
-                <div class="contenido">
-
-                    <span class="etiqueta">Urbana</span>
-
-                    <h3>Urban Rider</h3>
-
-                    <p>
-                        Una moto moderna y elegante,
-                        ideal para recorrer la ciudad
-                        con comodidad y estilo.
-                    </p>
-
-                    <div class="datos">
-                        <span> Urbana</span>
-                        <span> Moderna</span>
-                    </div>
-
-                    <a href="#" class="boton">
-                        Explorar moto
-                    </a>
-
-                </div>
-            </article>
-
-        </section>
+        </article>
 
     </main>
 
-    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>© 2026 MotoZone | Galería de motocicletas</p>
+        <p>© 2026 Moto World | Galería de Motos</p>
     </footer>
 
 </body>
