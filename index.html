@@ -3,180 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil Profesional</title>
+    <title>Perfil - Hoja de Vida</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --bg-color: #f4f7f6;
-            --card-bg: #ffffff;
-            --text-color: #333333;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
             margin: 0;
             padding: 20px;
         }
-
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
-        /* 1. Inicio y perfil */
-        .profile-header {
+        .header {
             text-align: center;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 25px;
-            margin-bottom: 25px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
         }
-
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--secondary-color);
+            border: 3px solid #3498db;
+        }
+        h1 { color: #2c3e50; margin-top: 10px; }
+        h2 { color: #2c3e50; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .info-box {
+            background: #eef2f5;
+            padding: 10px 15px;
+            border-radius: 5px;
             margin-bottom: 15px;
         }
-
-        h1 {
-            margin: 10px 0 5px 0;
-            color: var(--primary-color);
-        }
-
-        .bio {
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Estilos generales de secciones */
-        section {
-            margin-bottom: 25px;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 5px;
-            font-size: 1.3rem;
-        }
-
-        /* 2. Datos personales */
-        .contact-info {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            background: #eef2f5;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        /* Enlaces */
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* 6. Capacitaciones */
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
         .canva-img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             margin-top: 10px;
         }
-
-        /* 7. Recomendaciones */
-        .testimonial {
-            background: #f9f9f9;
-            border-left: 4px solid var(--secondary-color);
-            padding: 15px;
-            margin-top: 10px;
-            font-style: italic;
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- 1. Inicio y perfil -->
-        <header class="profile-header">
-            <!-- Reemplaza "foto.jpg" por el nombre de tu archivo de imagen subida a GitHub -->
-            <img src="foto.jpg" alt="Fotografía personal" class="profile-img">
+        <!-- FOTO E INICIO -->
+        <header class="header">
+            <img src="foto.jpg" alt="Foto de Perfil" class="profile-img">
             <h1>Tu Nombre Completo</h1>
-            <p class="bio">Breve presentación personal[cite: 1]: describe tu perfil, tus metas, fortalezas e intereses profesionales principales.</p>
+            <p>Perfil Profesional / Hoja de Vida</p>
         </header>
 
-        <!-- 2. Datos personales -->
+        <!-- IA (NUEVO) -->
+        <section>
+            <h2>Uso de IA / Herramientas de IA</h2>
+            <p>Prompts o descripción del uso de herramientas de Inteligencia Artificial aplicadas en tu proyecto o aprendizaje.</p>
+        </section>
+
+        <!-- DATOS PERSONALES -->
         <section>
             <h2>Datos Personales</h2>
-            <div class="contact-info">
-                <span class="contact-item">📍 Ciudad, País[cite: 1]</span>
-                <span class="contact-item">✉️ <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a>[cite: 1]</span>
-                <!-- Puedes añadir LinkedIn o repositorio personal aquí -->
+            <div class="info-box">
+                <p><strong>Ciudad:</strong> Tu Ciudad[cite: 1]</p>
+                <p><strong>Correo Profesional:</strong> correo@ejemplo.com[cite: 1]</p>
             </div>
         </section>
 
-        <!-- 3. Instrucción formal -->
+        <!-- INSTRUCCIÓN FORMAL — LINK -->
         <section>
             <h2>Instrucción Formal</h2>
+            <p>Estudios en curso o realizados[cite: 1]:</p>
             <ul>
                 <li>
-                    <strong>Nombre de la Carrera o Título</strong> - Estado (En curso / Finalizado)[cite: 1]
-                    <br>
-                    <a href="https://sitio-web-de-tu-institucion.edu" target="_blank" rel="noopener">
-                        Nombre de la Institución Académica[cite: 1]
-                    </a>
+                    <strong>Carrera / Título:</strong> Nombre de la Carrera[cite: 1] - 
+                    <a href="https://www.tu-universidad.edu.ec" target="_blank">Enlace a la Institución / Programa</a>[cite: 1, 2]
                 </li>
             </ul>
         </section>
 
-        <!-- 4. Experiencia -->
+        <!-- EXPERIENCIA -->
         <section>
-            <h2>Experiencia</h2>
-            <div>
-                <h3>Nombre del Proyecto / Puesto de trabajo[cite: 1]</h3>
-                <p>Descripción de prácticas, proyectos académicos relevantes o voluntariado[cite: 1]. Menciona las herramientas utilizadas y los logros obtenidos.</p>
-            </div>
+            <h2>Experiencia</h2>[cite: 2]
+            <p>Prácticas, voluntariado o proyectos académicos destacados.</p>[cite: 1]
         </section>
 
-        <!-- 5. Idiomas -->
+        <!-- INGLÉS - SEGUNDO IDIOMA -->
         <section>
-            <h2>Idiomas</h2>
+            <h2>Idiomas</h2>[cite: 2]
             <ul>
-                <li><strong>Inglés:</strong> Nivel (ej. B2 - Intermedio Alto)[cite: 1]</li>
-                <li><strong>Segundo idioma (si corresponde):</strong> Nivel[cite: 1]</li>
+                <li><strong>Inglés:</strong> Nivel (ej. B1, B2)[cite: 1, 2]</li>
+                <li><strong>Segundo idioma:</strong> Nivel[cite: 1, 2]</li>
             </ul>
         </section>
 
-        <!-- 6. Capacitaciones -->
+        <!-- CAPACITACIONES — CANVA -->
         <section>
-            <h2>Capacitaciones y Certificaciones</h2>
-            <p>Cursos completados e insignias académicas[cite: 1]:</p>
-            <!-- Guarda tu diseño exportado de Canva en el mismo repositorio y reemplaza el src -->
-            <img src="elemento-canva.png" alt="Elemento visual de Canva" class="canva-img">[cite: 1]
+            <h2>Capacitaciones</h2>[cite: 2]
+            <p>Cursos y certificaciones realizadas.[cite: 1]</p>
+            <!-- Imagen del diseño exportado desde Canva -->
+            <img src="elemento-canva.png" alt="Capacitaciones Canva" class="canva-img">[cite: 1, 2]
         </section>
 
-        <!-- 7. Recomendaciones -->
+        <!-- RECOMENDACIONES. — Empresa -->
         <section>
-            <h2>Recomendaciones</h2>
-            <!-- Si ya tienes una recomendación autorizada[cite: 1]: -->
-            <div class="testimonial">
-                <p>"Texto de la recomendación de
+            <h2>Recomendaciones</h2>[cite: 2]
+            <div class="info-box">
+                <p><em>"Recomendación brindada por una empresa o persona referente."</em></p>[cite: 1, 2]
+                <p><strong>— Empresa / Referente</strong></p>[cite: 1, 2]
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
