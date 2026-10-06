@@ -1,295 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web - Perfil - Hoja de Vida - Mi Persona</title>
+    <style>
+        /* Desplazamiento suave al hacer clic en los enlaces */
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <title>Italo Torres | Portafolio Personal</title>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding-top: 70px; /* Espacio para que el menú fijo no tape el contenido */
+        }
 
-    <link rel="stylesheet" href="style.css">
+        /* BARRA DE NAVEGACIÓN FIJA CON TUS MENÚS */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3498db;
+            display: block;
+            margin: 0 auto 15px auto;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #eef2f5;
+            padding-bottom: 20px;
+        }
+
+        section {
+            padding-top: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+
+        .info-box {
+            background: #f8fafc;
+            padding: 12px 18px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        a.external-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a.external-link:hover {
+            text-decoration: underline;
+        }
+
+        .canva-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
-
 <body>
 
-    <!-- BARRA SUPERIOR -->
-    <header class="navbar">
+    <!-- MENÚ PRINCIPAL AL QUE LE DAS CLIC Y TE REDIRECCIONA -->
+    <nav>
+        <ul>
+            <li><a href="#pagina-web">PÁGINA WEB</a></li>
+            <li><a href="#perfil">PERFIL</a></li>
+            <li><a href="#hoja-de-vida">HOJA DE VIDA</a></li>
+            <li><a href="#mi-persona">MI PERSONA</a></li>
+        </ul>
+    </nav>
 
-        <div class="logo">
-            ITALO<span>.</span>
-        </div>
+    <div class="container">
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="perfil.html">Perfil</a>
-            <a href="datos.html">Datos</a>
-            <a href="estudios.html">Estudios</a>
-        </nav>
+        <!-- 1. PÁGINA WEB (Inicio y Presentación) -->
+        <section id="pagina-web">
+            <header class="header">
+                <img src="foto.jpg" alt="Foto de perfil" class="profile-img">
+                <h1>Tu Nombre Completo</h1>
+                <p>Bienvenido a mi sitio web personal publicado en GitHub Pages.</p>
+            </header>
+        </section>
 
-    </header>
+        <!-- 2. PERFIL (Uso de IA y Enfoque Profesional) -->
+        <section id="perfil">
+            <h2>Perfil</h2>
+            <p><strong>Uso de Inteligencia Artificial (IA):</strong> Descripción sobre cómo utilizas herramientas de IA para potenciar tu perfil, proyectos o aprendizaje[cite: 3].</p>
+            <div class="info-box">
+                <p>Breve resumen de tus objetivos, visión profesional e intereses clave[cite: 1].</p>
+            </div>
+        </section>
 
+        <!-- 3. HOJA DE VIDA (Datos, Estudios, Experiencia, Idiomas, Canva, Empresa) -->
+        <section id="hoja-de-vida">
+            <h2>Hoja de Vida</h2>
 
-    <!-- PORTADA -->
-    <section class="hero">
-
-        <div class="hero-text">
-
-            <p class="small-title">
-                PÁGINA PERSONAL / PORTAFOLIO
-            </p>
-
-            <h1>
-                Hola, soy<br>
-                <span>Italo Torres</span>
-            </h1>
-
-            <p class="description">
-                Estudiante del área de tecnología e informática,
-                interesado en programación, redes, sistemas y
-                desarrollo web.
-            </p>
-
-            <a href="perfil.html" class="main-button">
-                CONOCER MI PERFIL
-                <span>→</span>
-            </a>
-
-        </div>
-
-
-        <div class="hero-photo">
-
-            <div class="photo-circle">
-
-                <img src="imagenes/foto.jpg"
-                     alt="Fotografía de Italo Torres">
-
+            <h3>Datos Personales</h3>
+            <div class="info-box">
+                <p><strong>Ciudad:</strong> Tu Ciudad[cite: 1]</p>
+                <p><strong>Correo Profesional:</strong> correo@ejemplo.com[cite: 1]</p>
             </div>
 
-            <div class="circle-decoration"></div>
-
-        </div>
-
-    </section>
-
-
-    <!-- MENÚ PRINCIPAL -->
-    <section class="menu-section">
-
-        <div class="section-title">
-
-            <p>MI INFORMACIÓN</p>
-
-            <h2>
-                Explora mi perfil
-            </h2>
-
-        </div>
-
-
-        <div class="cards">
-
-
-            <!-- PERFIL -->
-            <a href="perfil.html" class="card">
-
-                <div class="card-number">
-                    01
-                </div>
-
-                <div class="card-icon">
-                    👤
-                </div>
-
-                <h3>
-                    Perfil
-                </h3>
-
-                <p>
-                    Conoce quién soy y mi presentación personal.
-                </p>
-
-                <div class="card-arrow">
-                    →
-                </div>
-
-            </a>
-
-
-            <!-- DATOS -->
-            <a href="datos.html" class="card">
-
-                <div class="card-number">
-                    02
-                </div>
-
-                <div class="card-icon">
-                    📋
-                </div>
-
-                <h3>
-                    Datos personales
-                </h3>
-
-                <p>
-                    Información de contacto y datos profesionales.
-                </p>
-
-                <div class="card-arrow">
-                    →
-                </div>
-
-            </a>
-
-
-            <!-- ESTUDIOS -->
-            <a href="estudios.html" class="card">
-
-                <div class="card-number">
-                    03
-                </div>
-
-                <div class="card-icon">
-                    🎓
-                </div>
-
-                <h3>
-                    Instrucción formal
-                </h3>
-
-                <p>
-                    Mis estudios, formación e institución académica.
-                </p>
-
-                <div class="card-arrow">
-                    →
-                </div>
-
-            </a>
-
-
-            <!-- EXPERIENCIA -->
-            <a href="experiencia.html" class="card">
-
-                <div class="card-number">
-                    04
-                </div>
-
-                <div class="card-icon">
-                    💻
-                </div>
-
-                <h3>
-                    Experiencia
-                </h3>
-
-                <p>
-                    Proyectos y experiencias académicas realizadas.
-                </p>
-
-                <div class="card-arrow">
-                    →
-                </div>
-
-            </a>
-
-
-            <!-- IDIOMAS -->
-            <a href="idiomas.html" class="card">
-
-                <div class="card-number">
-                    05
-                </div>
-
-                <div class="card-icon">
-                    🌎
-                </div>
-
-                <h3>
-                    Idiomas
-                </h3>
-
-                <p>
-                    Nivel de inglés y otros idiomas.
-                </p>
-
-                <div class="card-arrow">
-                    →
-                </div>
-
-            </a>
-
-
-            <!-- CAPACITACIONES -->
-            <a href="capacitaciones.html" class="card">
-
-                <div class="card-number">
-                    06
-                </div>
-
-                <div class="card-icon">
-                    📚
-                </div>
-
-                <h3>
-                    Capacitaciones
-                </h3>
-
-                <p>
-                    Cursos, conocimientos y certificaciones.
-                </p>
-
-                <div class="card-arrow">
-                    →
-                </div>
-
-            </a>
-
-
-            <!-- RECOMENDACIONES -->
-            <a href="recomendaciones.html" class="card">
-
-                <div class="card-number">
-                    07
-                </div>
-
-                <div class="card-icon">
-                    ⭐
-                </div>
-
-                <h3>
-                    Recomendaciones
-                </h3>
-
-                <p>
-                    Referencias profesionales y académicas.
-                </p>
-
-                <div class="card-arrow">
-                    →
-                </div>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- PIE DE PÁGINA -->
-    <footer>
-
-        <div>
-            <strong>ITALO TORRES</strong>
-            <p>Portafolio personal</p>
-        </div>
-
-        <p>
-            © 2026 Todos los derechos reservados
-        </p>
-
-    </footer>
+            <h3>Instrucción Formal</h3>
+            <p>
+                <strong>Carrera / Titulación:</strong> Nombre de tus estudios[cite: 1]<br>
+                <a href="https://www.tu-institucion.edu" target="_blank" class="external-link">
+                    Enlace a la Institución o Programa Académico[cite: 1, 3]
+                </a>
+            </p>
+
+            <h3>Experiencia</h3>
+            <p>Prácticas profesionales, voluntariado o proyectos académicos destacados[cite: 1].</p>
+
+            <h3>Idiomas</h3>
+            <ul>
+                <li><strong>Inglés:</strong> Nivel (ej. Intermedio / B2)[cite: 1, 3]</li>
+                <li><strong>Segundo idioma:</strong> Nivel[cite: 1, 3]</li>
+            </ul>
+
+            <h3>Capacitaciones (Canva)</h3>
+            <p>Cursos y certificaciones obtenidas[cite: 1]:</p>
+            <!-- Imagen diseñada en Canva subida a tu repositorio -->
+            <img src="elemento-canva.png" alt="Diseño de Canva Capacitaciones" class="canva-img">[cite: 1, 3]
+
+            <h3>Recomendaciones</h3>
+            <div class="info-box">
+                <p><em>"Recomendación proporcionada por una empresa o persona referente."</em>[cite: 1, 3]</p>
+                <p><strong>— Nombre de la Empresa / Referente</strong>[cite: 1, 3]</p>
+            </div>
+        </section>
+
+        <!-- 4. MI PERSONA (Información personal o valores) -->
+        <section id="mi-persona">
+            <h2>Mi Persona</h2>
+            <p>Sección dedicada a describir tus valores, pasatiempos, proyectos personales o aspectos únicos sobre ti[cite: 3].</p>
+        </section>
+
+    </div>
 
 </body>
-
 </html>
