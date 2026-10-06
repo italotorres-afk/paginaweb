@@ -1,124 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil - Hoja de Vida</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 20px;
-        }
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #3498db;
-        }
-        h1 { color: #2c3e50; margin-top: 10px; }
-        h2 { color: #2c3e50; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
-        .info-box {
-            background: #eef2f5;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .canva-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Hoja de Vida - Italo Torres</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <!-- FOTO E INICIO -->
-        <header class="header">
-            <img src="foto.jpg" alt="Foto de Perfil" class="profile-img">
-            <h1>Tu Nombre Completo</h1>
-            <p>Perfil Profesional / Hoja de Vida</p>
-        </header>
+    <!-- MENÚ -->
+    <header>
+        <nav>
+            <h2>Italo Torres</h2>
 
-        <!-- IA (NUEVO) -->
-        <section>
-            <h2>Uso de IA / Herramientas de IA</h2>
-            <p>Prompts o descripción del uso de herramientas de Inteligencia Artificial aplicadas en tu proyecto o aprendizaje.</p>
-        </section>
-
-        <!-- DATOS PERSONALES -->
-        <section>
-            <h2>Datos Personales</h2>
-            <div class="info-box">
-                <p><strong>Ciudad:</strong> Tu Ciudad[cite: 1]</p>
-                <p><strong>Correo Profesional:</strong> correo@ejemplo.com[cite: 1]</p>
-            </div>
-        </section>
-
-        <!-- INSTRUCCIÓN FORMAL — LINK -->
-        <section>
-            <h2>Instrucción Formal</h2>
-            <p>Estudios en curso o realizados[cite: 1]:</p>
             <ul>
-                <li>
-                    <strong>Carrera / Título:</strong> Nombre de la Carrera[cite: 1] - 
-                    <a href="https://www.tu-universidad.edu.ec" target="_blank">Enlace a la Institución / Programa</a>[cite: 1, 2]
-                </li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#datos">Datos personales</a></li>
+                <li><a href="#estudios">Estudios</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#idiomas">Idiomas</a></li>
+                <li><a href="#capacitaciones">Capacitaciones</a></li>
+                <li><a href="#recomendaciones">Recomendaciones</a></li>
             </ul>
-        </section>
+        </nav>
+    </header>
 
-        <!-- EXPERIENCIA -->
-        <section>
-            <h2>Experiencia</h2>[cite: 2]
-            <p>Prácticas, voluntariado o proyectos académicos destacados.</p>[cite: 1]
-        </section>
 
-        <!-- INGLÉS - SEGUNDO IDIOMA -->
-        <section>
-            <h2>Idiomas</h2>[cite: 2]
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+
+        <div>
+            <h1>Hola, soy Italo Torres</h1>
+
+            <h2>Estudiante de Tecnología</h2>
+
+            <p>
+                Soy estudiante interesado en el área de tecnología,
+                programación, redes y sistemas informáticos.
+                Me gusta aprender nuevas herramientas y desarrollar
+                mis conocimientos para crecer profesionalmente.
+            </p>
+        </div>
+
+        <img src="imagenes/foto.jpg" alt="Fotografía de Italo">
+
+    </section>
+
+
+    <!-- DATOS PERSONALES -->
+    <section id="datos">
+
+        <h2>Datos personales</h2>
+
+        <div class="tarjeta">
+
+            <p><strong>Nombre:</strong> Italo Torres</p>
+
+            <p><strong>Ciudad:</strong> Ecuador</p>
+
+            <p>
+                <strong>Correo profesional:</strong>
+                <a href="mailto:italotorres@email.com">
+                    italotorres@email.com
+                </a>
+            </p>
+
+            <p><strong>Área de interés:</strong> Tecnología e informática</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INSTRUCCIÓN FORMAL -->
+    <section id="estudios">
+
+        <h2>Instrucción formal</h2>
+
+        <div class="tarjeta">
+
+            <h3>Estudios superiores</h3>
+
+            <p>
+                Actualmente me encuentro cursando estudios relacionados
+                con tecnología e informática.
+            </p>
+
+            <p>
+                <strong>Institución:</strong>
+                Universidad / Instituto
+            </p>
+
+            <p>
+                <strong>Programa:</strong>
+                Tecnología en Informática
+            </p>
+
+            <a class="boton"
+               href="https://www.google.com"
+               target="_blank">
+                Ver institución
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCIA -->
+    <section id="experiencia">
+
+        <h2>Experiencia</h2>
+
+        <div class="tarjeta">
+
+            <h3>Proyectos académicos</h3>
+
+            <p>
+                He desarrollado proyectos académicos relacionados
+                con programación, bases de datos, redes y sistemas
+                informáticos.
+            </p>
+
             <ul>
-                <li><strong>Inglés:</strong> Nivel (ej. B1, B2)[cite: 1, 2]</li>
-                <li><strong>Segundo idioma:</strong> Nivel[cite: 1, 2]</li>
+                <li>Programación en Python</li>
+                <li>Diseño de páginas web</li>
+                <li>Bases de datos</li>
+                <li>Configuración de redes</li>
             </ul>
-        </section>
 
-        <!-- CAPACITACIONES — CANVA -->
-        <section>
-            <h2>Capacitaciones</h2>[cite: 2]
-            <p>Cursos y certificaciones realizadas.[cite: 1]</p>
-            <!-- Imagen del diseño exportado desde Canva -->
-            <img src="elemento-canva.png" alt="Capacitaciones Canva" class="canva-img">[cite: 1, 2]
-        </section>
+        </div>
 
-        <!-- RECOMENDACIONES. — Empresa -->
-        <section>
-            <h2>Recomendaciones</h2>[cite: 2]
-            <div class="info-box">
-                <p><em>"Recomendación brindada por una empresa o persona referente."</em></p>[cite: 1, 2]
-                <p><strong>— Empresa / Referente</strong></p>[cite: 1, 2]
-            </div>
-        </section>
-    </div>
+    </section>
+
+
+    <!-- IDIOMAS -->
+    <section id="idiomas">
+
+        <h2>Idiomas</h2>
+
+        <div class="tarjeta">
+
+            <p>
+                <strong>Español:</strong> Nativo
+            </p>
+
+            <p>
+                <strong>Inglés:</strong> Nivel básico / A1
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAPACITACIONES -->
+    <section id="capacitaciones">
+
+        <h2>Capacitaciones</h2>
+
+        <div class="tarjeta">
+
+            <h3>Cursos y capacitaciones</h3>
+
+            <ul>
+                <li>Introducción a la programación</li>
+                <li>HTML y CSS</li>
+                <li>Git y GitHub</li>
+                <li>Redes informáticas</li>
+            </ul>
+
+            <h3>Diseño realizado en Canva</h3>
+
+            <img
+                src="imagenes/canva.png"
+                alt="Diseño realizado en Canva"
+                class="canva">
+
+        </div>
+
+    </section>
+
+
+    <!-- RECOMENDACIONES -->
+    <section id="recomendaciones">
+
+        <h2>Recomendaciones</h2>
+
+        <div class="tarjeta">
+
+            <h3>Próximamente</h3>
+
+            <p>
+                Esta sección queda preparada para incorporar
+                futuras recomendaciones profesionales o académicas
+                con la autorización correspondiente.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Italo Torres - Hoja de Vida
+        </p>
+
+    </footer>
 
 </body>
+
 </html>
